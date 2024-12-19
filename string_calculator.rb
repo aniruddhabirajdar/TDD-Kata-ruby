@@ -1,7 +1,10 @@
+require_relative './lib/input_paraser'
 class StringCalculator
   def self.add(_input)
-    parsed_input = _input
-    return 0 if parsed_input.empty?
+    parsed_input = InputParser.extract_numbers(_input)
+    return 0 if _input.empty?
+
+    parsed_input.sum
   end
 end
 
