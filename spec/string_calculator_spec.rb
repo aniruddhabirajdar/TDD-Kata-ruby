@@ -17,5 +17,10 @@ RSpec.describe StringCalculator do
       random_numbers_string = random_numbers.join(',')
       expect(StringCalculator.add(random_numbers_string)).to eq(sum_of_numbers)
     end
+
+    # Also controlled scenarios
+    it 'handle an unknown amount of numbers (controlled scenarios)' do
+      expect(StringCalculator.add('1,2,3,4')).to eq(10)
+    end
   end
 end
