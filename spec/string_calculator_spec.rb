@@ -22,5 +22,13 @@ RSpec.describe StringCalculator do
     it 'handle an unknown amount of numbers (controlled scenarios)' do
       expect(StringCalculator.add('1,2,3,4')).to eq(10)
     end
+
+    it 'handle new lines between numbers (instead of commas)' do
+      expect(StringCalculator.add("1\n2,3")).to eq(6)
+    end
+
+    it 'the following input is NOT ok: “[number],\n”' do
+      expect(StringCalculator.add("2\n1,\n")).to raise_error('Invalid input')
+    end
   end
 end
