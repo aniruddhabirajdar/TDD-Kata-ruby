@@ -1,11 +1,13 @@
 require_relative './lib/input_paraser'
 class StringCalculator
   def self.add(_input)
-    parsed_input = InputParser.extract_numbers(_input)
     return 0 if _input.empty?
-    
 
-    parsed_input.sum
+    delimiter, numbers = InputParser.extract_delimiters_and_numbers(_input)
+    nums = InputParser.extract_numbers(delimiter, numbers)
+    # nums = numbers.
+
+    nums.sum
   end
 end
 

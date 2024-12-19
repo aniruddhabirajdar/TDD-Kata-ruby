@@ -27,8 +27,8 @@ RSpec.describe StringCalculator do
       expect(StringCalculator.add("1\n2,3")).to eq(6)
     end
 
-    it 'the following input is NOT ok: “[number],\n”' do
-      expect { StringCalculator.add("2\n1,\n\n") }.to raise_error('Invalid input')
+    it 'Support different delimiters' do
+      expect(StringCalculator.add("//;\n1;2")).to eq(3)
     end
   end
 end
