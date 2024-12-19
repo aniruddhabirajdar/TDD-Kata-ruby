@@ -28,7 +28,7 @@ RSpec.describe StringCalculator do
     end
 
     it 'the following input is NOT ok: “[number],\n”' do
-      expect(StringCalculator.add("2\n1,\n")).to raise_error('Invalid input')
+      expect { StringCalculator.add("2\n1,\n\n") }.to raise_error('Invalid input')
     end
   end
 end
