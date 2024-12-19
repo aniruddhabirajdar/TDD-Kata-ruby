@@ -5,7 +5,8 @@ class StringCalculator
 
     delimiter, numbers = InputParser.extract_delimiters_and_numbers(_input)
     nums = InputParser.extract_numbers(delimiter, numbers)
-    # nums = numbers.
+    negatives = nums.select { |n| n < 0 }
+    raise "Negatives not allowed: #{negatives.join(', ')}" if negatives.any?
 
     nums.sum
   end
