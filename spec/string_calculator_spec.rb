@@ -9,5 +9,13 @@ RSpec.describe StringCalculator do
     it 'two numbers, separated by commas, and will return their sum' do
       expect(StringCalculator.add('1,2')).to eq(3)
     end
+
+    it 'handle an unknown amount of numbers' do
+      # can create Random string of random number to test this case , That dosen't make sent only cosnume the memory and power so test this using 100 list of numbers
+      random_numbers = Array.new(100) { rand(1..1000) }
+      sum_of_numbers = random_numbers.sum
+      random_numbers_string = random_numbers.join(',')
+      expect(StringCalculator.add(random_numbers_string)).to eq(sum_of_numbers)
+    end
   end
 end
