@@ -1,0 +1,8 @@
+# bin/run
+require_relative '../string_calculator/calculator'
+
+puts "Enter numbers (e.g., 1,2,3 or //;\n1;2):"
+input = gets.chomp
+
+result = StringCalculator::Calculator.add(input)
+puts "Result: #{result}"
