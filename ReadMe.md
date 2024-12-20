@@ -28,6 +28,10 @@ To ensure the correctness of the program, run the test cases:
    ```
 3. The test results will display in the terminal, showing which tests passed or failed.
 
+### Why We Used the Pipeline Pattern
+
+While working on this code, I noticed there are multiple stages like extract, split, validate, and sum. Each of these stages is independent and does its own job. The problem itself says to "work incrementally," so it made sense to handle each step one by one. To make it easy to add new stages in the future, I decided to use the Pipeline Pattern. This way, we can simply add or update stages without disturbing the rest of the code.
+
 ---
 
 # Problem Statement
