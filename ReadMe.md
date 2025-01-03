@@ -99,7 +99,7 @@ int Add(string numbers)
    - Delimiters can also have lengths longer than one character.
 
 9. **Support configurable Delimiters**: 
-   - Allow  Allow the dyanic Delimiters configuration :
+   - Allow the dyanic Delimiters configuration :
      ```
       '*' => ->(nums) { nums.reduce(1, :*) } 
      ```
