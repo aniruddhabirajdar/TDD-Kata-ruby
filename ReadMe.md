@@ -98,6 +98,15 @@ int Add(string numbers)
      - Input: `"//[*][%]\n1*2%3"` → Output: `6`
    - Delimiters can also have lengths longer than one character.
 
+9. **Support configurable Delimiters**: 
+   - Allow  Allow the dyanic Delimiters configuration :
+     ```
+      '*' => ->(nums) { nums.reduce(1, :*) } 
+     ```
+   - Example:
+     - Input: `"//*\n1*2*4"` → Output: `8`
+   - Delimiters can also have lengths longer than one character.   
+
 ---
 
 # Notes
