@@ -35,6 +35,10 @@ RSpec.describe StringCalculator::Calculator do
       expect(StringCalculator::Calculator.add("//;\n1;2")).to eq(3)
     end
 
+    it 'Support * delemeter as multiplier ' do
+      expect(StringCalculator::Calculator.add("//*\n4*2")).to eq(8)
+    end
+
     it 'ignores numbers greater than 1000' do
       expect(StringCalculator::Calculator.add('2,1001,6')).to eq(8)
     end
